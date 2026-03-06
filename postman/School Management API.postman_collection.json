@@ -1,0 +1,69 @@
+{
+  "info": {
+    "_postman_id": "db976794-64a1-4db2-bb2d-aeac360ca7f0",
+    "name": "School Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30702873"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"name\": \"Test School\",\r\n\"address\": \"Hyderabad\",\r\n\"latitude\": 17.385,\r\n\"longitude\": 78.486\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/listSchools?latitude=17.385&longitude=78.486",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "17.385"
+            },
+            {
+              "key": "longitude",
+              "value": "78.486"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
