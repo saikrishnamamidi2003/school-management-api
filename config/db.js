@@ -12,12 +12,12 @@ const db = mysql.createPool({
   }
 });
 
-
-db.connect((err) => {
+//test query
+db.query("SELECT 1", (err) => {
   if (err) {
     console.error("Database connection failed:", err);
   } else {
-    console.log("MySQL Connected Successfully");
+    console.log("MySQL Connected");
   }
 });
 
